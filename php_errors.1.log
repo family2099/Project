@@ -1,0 +1,28 @@
+[18-Jul-2016 08:13:57 UTC] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/ubuntu/workspace/shopping/Ch30/Connections/connection.php on line 3
+[18-Jul-2016 08:13:58 UTC] PHP Stack trace:
+[18-Jul-2016 08:13:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/shopping/Ch30/index.php:0
+[18-Jul-2016 08:13:58 UTC] PHP   2. require_once() /home/ubuntu/workspace/shopping/Ch30/index.php:1
+[18-Jul-2016 08:13:58 UTC] PHP   3. mysql_connect() /home/ubuntu/workspace/shopping/Ch30/Connections/connection.php:3
+[18-Jul-2016 08:13:58 UTC] PHP Fatal error:  Access denied for user 'root'@'localhost' (using password: NO) in /home/ubuntu/workspace/shopping/Ch30/Connections/connection.php on line 4
+[18-Jul-2016 08:13:58 UTC] PHP Stack trace:
+[18-Jul-2016 08:13:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/shopping/Ch30/index.php:0
+[18-Jul-2016 08:13:58 UTC] PHP   2. require_once() /home/ubuntu/workspace/shopping/Ch30/index.php:1
+[18-Jul-2016 08:13:58 UTC] PHP   3. trigger_error() /home/ubuntu/workspace/shopping/Ch30/Connections/connection.php:4
+[22-Jul-2016 06:19:15 UTC] PHP Warning:  require_once(connection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/shopping/Ch30/member_center.php on line 1
+[22-Jul-2016 06:19:15 UTC] PHP Stack trace:
+[22-Jul-2016 06:19:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/shopping/Ch30/member_center.php:0
+[22-Jul-2016 06:19:15 UTC] PHP Fatal error:  require_once(): Failed opening required 'connection.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/shopping/Ch30/member_center.php on line 1
+[22-Jul-2016 06:19:15 UTC] PHP Stack trace:
+[22-Jul-2016 06:19:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/shopping/Ch30/member_center.php:0
+[22-Jul-2016 07:45:16 UTC] PHP Warning:  mysql_free_result() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/shopping/Ch30/member_info.php on line 295
+[22-Jul-2016 07:45:16 UTC] PHP Stack trace:
+[22-Jul-2016 07:45:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/shopping/Ch30/member_info.php:0
+[22-Jul-2016 07:45:16 UTC] PHP   2. mysql_free_result() /home/ubuntu/workspace/shopping/Ch30/member_info.php:295
+[22-Jul-2016 07:49:07 UTC] PHP Warning:  mysql_free_result() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/shopping/Ch30/member_info.php on line 295
+[22-Jul-2016 07:49:07 UTC] PHP Stack trace:
+[22-Jul-2016 07:49:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/shopping/Ch30/member_info.php:0
+[22-Jul-2016 07:49:07 UTC] PHP   2. mysql_free_result() /home/ubuntu/workspace/shopping/Ch30/member_info.php:295
+[22-Jul-2016 07:49:19 UTC] PHP Warning:  mysql_free_result() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/shopping/Ch30/member_info.php on line 295
+[22-Jul-2016 07:49:19 UTC] PHP Stack trace:
+[22-Jul-2016 07:49:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/shopping/Ch30/member_info.php:0
+[22-Jul-2016 07:49:19 UTC] PHP   2. mysql_free_result() /home/ubuntu/workspace/shopping/Ch30/member_info.php:295
