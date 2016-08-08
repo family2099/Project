@@ -9,7 +9,7 @@ require_once('function.php');
 //echo $_SESSION['database'];
 //echo "123";
 
-$_SESSION['PrevPage'] = $_SERVER['PHP_SELF'];
+
 if(!isset($_SESSION['userName'])){
     
    

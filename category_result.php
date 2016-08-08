@@ -20,14 +20,7 @@ if (!(isset($_GET['pro_id'])) || !(isset($_GET['sub_id']))) {
 	exit;
 }
 ?>
-<?php
-// 尋找關鍵字
-if (!isset($_SESSION['keyword']))
-	$_SESSION['keyword'] = "";
-// 尋找範圍
-if (!isset($_SESSION['keyword_category']))
-	$_SESSION['keyword_category'] = "";
-?>
+
 <?php	
 $database = array("computer_books", "education_software", "commerical_software");
 $category = array("電腦圖書", "教育軟體", "商用軟體");
@@ -271,7 +264,7 @@ $rowsPerPage = 10;
 						                        <?php echo $row['saleprice']; ?> 元
 					                      	</span>
 											<br />
-											<a href="add_to_cart.php?id=<?php echo $row['id']; ?>" class="btn btn-danger btn-lg" role="button">放入購物車</a>
+											<a href="/EasyMVC/Index/add_to_cart/<?php echo $row['id']; ?>" class="btn btn-danger btn-lg" role="button">放入購物車</a>
 											
 										</td>
 									</tr>

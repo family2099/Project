@@ -48,9 +48,9 @@
 	if($result)
 	{
 		//目前的列
-		$row=$result->fetch(PDO::FETCH_ASSOC);
+		$data=$result->fetch(PDO::FETCH_ASSOC);
 		// 總頁數,ceil() 函數向上捨入為最接近的整數(就是有小數點就直接進位)。
-		//$totalPages = ceil($totalRows / $rowsPerPage);
+		//$totalPages = ceil($totalRows / $datasPerPage);
 		//echo $totalRows;
 	}
 	
@@ -80,29 +80,29 @@
 	//var_dump($getitem);
 	//$totalRows = $getitem->rowCount();	
 	//echo $totalRows;
-	//$row = $getitem->fetch(PDO::FETCH_ASSOC)
+	//$data = $getitem->fetch(PDO::FETCH_ASSOC)
 	
-	// while($row = $getitem->fetch(PDO::FETCH_ASSOC))
+	// while($data = $getitem->fetch(PDO::FETCH_ASSOC))
 	// {
 
-	// 		$row=array(
-	// 				"id"=>$row["id"],
-	// 				"title"=>$row["title"],
-	// 				"author"=>$row["author"],
-	// 				"translator"=>$row["translator"],
-	// 				"contents"=>$row["contents"],
-	// 				"feature"=>$row["feature"],
-	// 				"cd"=>$row["cd"],
-	// 				"publishdate"=>$row["publishdate"],
-	// 				"price"=>$row["price"],
-	// 				"discount"=>$row["discount"],
-	// 				"saleprice"=>$row["saleprice"],
-	// 				"item_index"=>$row["item_index"],
-	// 				"photo"=>$row["photo"],
-	// 				"publisher"=>$row["publisher"],
-	// 				"color"=>$row["color"],
-	// 				"category"=>$row["category"],
-	// 				"category_type"=>$row["category_type"]
+	// 		$data=array(
+	// 				"id"=>$data["id"],
+	// 				"title"=>$data["title"],
+	// 				"author"=>$data["author"],
+	// 				"translator"=>$data["translator"],
+	// 				"contents"=>$data["contents"],
+	// 				"feature"=>$data["feature"],
+	// 				"cd"=>$data["cd"],
+	// 				"publishdate"=>$data["publishdate"],
+	// 				"price"=>$data["price"],
+	// 				"discount"=>$data["discount"],
+	// 				"saleprice"=>$data["saleprice"],
+	// 				"item_index"=>$data["item_index"],
+	// 				"photo"=>$data["photo"],
+	// 				"publisher"=>$data["publisher"],
+	// 				"color"=>$data["color"],
+	// 				"category"=>$data["category"],
+	// 				"category_type"=>$data["category_type"]
 			
 	// 		);
 			
@@ -110,7 +110,7 @@
 			
 	// }
 
-	//var_dump($row);
+	//var_dump($data);
 		
 	
 ?>
@@ -230,14 +230,14 @@
 							<table class="item_detail_style1">
 								<tr>
 									<td class="item_detail_style3">
-										<?php echo $row['title']; ?>
+										<?php echo $data['title']; ?>
 									</td>
 								</tr>
 							</table>
 							<table class="item_detail_style4">
 								<tr>
 									<td class="item_detail_style5">
-										<img src="<?php echo 'photo/item/'.$row['photo']; ?>" width="108" />
+										<img src="<?php echo 'photo/item/'.$data['photo']; ?>" width="108" />
 										<br /><br />
 
 
@@ -249,7 +249,7 @@
 													編號
 												</td>
 												<td class="item_detail_style8">
-													<?php echo $row['item_index']; ?>
+													<?php echo $data['item_index']; ?>
 												</td>
 											</tr>
 											<tr>
@@ -257,7 +257,7 @@
 													作者
 												</td>
 												<td class="item_detail_style8">
-													<?php echo $row['author']; ?>
+													<?php echo $data['author']; ?>
 												</td>
 											</tr>
 											<tr>
@@ -265,7 +265,7 @@
 													翻譯
 												</td>
 												<td class="item_detail_style8">
-													<?php echo $row['translator']; ?>
+													<?php echo $data['translator']; ?>
 												</td>
 											</tr>
 											<tr>
@@ -273,7 +273,7 @@
 													出版商
 												</td>
 												<td class="item_detail_style8">
-													<?php echo $row['publisher']; ?>
+													<?php echo $data['publisher']; ?>
 												</td>
 											</tr>
 											<tr>
@@ -281,7 +281,7 @@
 													初版日
 												</td>
 												<td class="item_detail_style8">
-													<?php echo date("Y年n月", strtotime($row['publishdate'])); ?>
+													<?php echo date("Y年n月", strtotime($data['publishdate'])); ?>
 												</td>
 											</tr>
 											<tr>
@@ -289,8 +289,8 @@
 													類別
 												</td>
 												<td class="item_detail_style8">
-													<?php echo $row['category']; ?> 
-													<?php echo $row['category_type']; ?>
+													<?php echo $data['category']; ?> 
+													<?php echo $data['category_type']; ?>
 												</td>
 											</tr>
 											<tr>
@@ -298,7 +298,7 @@
 													定價
 												</td>
 												<td class="item_detail_style8">
-													<?php echo $row['price']; ?> 元
+													<?php echo $data['price']; ?> 元
 												</td>
 											</tr>
 											<tr>
@@ -307,10 +307,10 @@
 												</td>
 												<td class="item_detail_style8">
 													<span class="item_detail_style10">
-													<?php echo $row['discount']; ?>
+													<?php echo $data['discount']; ?>
 				                  		  </span> 折
 													<span class="item_detail_style10">
-													<?php echo $row['saleprice']; ?>
+													<?php echo $data['saleprice']; ?>
 						                  </span> 元
 												</td>
 											</tr>
@@ -319,14 +319,14 @@
 													備註
 												</td>
 												<td class="item_detail_style8">
-													<?php if ($row['cd']==1) { echo '本產品附光碟'; } ?>
+													<?php if ($data['cd']==1) { echo '本產品附光碟'; } ?>
 												</td>
 											</tr>
 										</table>
 									</td>
 									<td class="item_detail_style6">
 										<br>
-										<a href="add_to_cart.php?id=<?php echo $row['id']; ?>" class="btn btn-info btn-lg cardata" role="button">加入購物車</a>
+										<a href="add_to_cart.php?id=<?php echo $data['id']; ?>" class="btn btn-info btn-lg cardata" role="button">加入購物車</a>
 
 
 										<br>
@@ -337,7 +337,7 @@
 								</tr>
 							</table>
 							<?php 
-						      if (isset($row['contents'])) 
+						      if (isset($data['contents'])) 
 						      { 
 						    ?>
 							<table class="item_detail_style13">
@@ -346,13 +346,13 @@
 										目<br />錄
 									</td>
 									<td class="item_detail_style12">
-										<?php echo nl2br($row['contents']); ?>
+										<?php echo nl2br($data['contents']); ?>
 									</td>
 								</tr>
 							</table>
 							<?php 
 								  } 
-								  if (isset($row['feature'])) 
+								  if (isset($data['feature'])) 
 									{ 
 							  ?>
 							<table class="item_detail_style13">
@@ -361,7 +361,7 @@
 										特<br />色
 									</td>
 									<td class="item_detail_style12">
-										<?php echo nl2br($row['feature']); ?>
+										<?php echo nl2br($data['feature']); ?>
 									</td>
 								</tr>
 							</table>
@@ -384,7 +384,7 @@
 										備<br />註
 									</td>
 									<td class="item_detail_style12">
-										<?php if ($row['color']==1) { echo '彩色書'; } ?>
+										<?php if ($data['color']==1) { echo '彩色書'; } ?>
 									</td>
 								</tr>
 							</table>
